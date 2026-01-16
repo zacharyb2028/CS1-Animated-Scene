@@ -34,15 +34,45 @@ body {
    height: 280px; 
    position:absolute;
    top: 237px;
-   left: 250px;
+   left: 300px;
+   z-index:10;
 }
 
 #hospital {
     width: 600px;
     height: 530px;
+    position:relative;
+    top: 0px;
+    left:0px;
 }
 
 #remote {
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    top:352px;
+    left:309px;
+    z-index: 12
+}
+
+#fire {
+    width: 200px;
+    height: 150px;
+    position:absolute;
+    top:383px;
+    left:400px;
+    z-index: 12;
+}
+
+#fire2 {
+    width: 200px;
+    height: 150px;
+    position:absolute;
+    top:383px;
+    left:35px;
+    z-index: 12;
+}
+
+@keyframes translate {
+    
 }
