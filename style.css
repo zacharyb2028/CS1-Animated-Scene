@@ -73,6 +73,15 @@ body {
     z-index: 12;
 }
 
+#smoke {
+    width: 200px;
+    height: 150px;
+    position:absolute;
+    top:383px;
+    left:35px;
+    z-index: 12;
+}
+
 @keyframes translate {
     
 }
