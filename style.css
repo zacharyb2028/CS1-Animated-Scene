@@ -50,9 +50,9 @@ body {
     width: 30px;
     height: 30px;
     position:absolute;
-    top:352px;
+    top:370px;
     left:309px;
-    z-index: 12
+    z-index: 12;
 }
 
 #fire {
@@ -62,6 +62,7 @@ body {
     top:383px;
     left:400px;
     z-index: 12;
+    animation: spread 5s infinite;
 }
 
 #fire2 {
@@ -71,17 +72,56 @@ body {
     top:383px;
     left:35px;
     z-index: 12;
+    animation: spread 5s infinite;
 }
 
-#smoke {
-    width: 200px;
-    height: 150px;
+#explosion {
+    width: 400px;
+    height: 200px;
     position:absolute;
-    top:383px;
-    left:35px;
+    top:180px;
+    left:150px;
+    animation:detonation 10s infinite;
+}
+#hand {
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    top:352px;
+    left:309px;
     z-index: 12;
+    animation:finger-click 3s infinite;
 }
 
-@keyframes translate {
-    
+@keyframes finger-click {
+   0% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes detonation {
+    0% {
+        transform:scale(0) skew(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform:scale(1.5) skew(10deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2) skew(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes spread {
+    0% {
+        transform: translate(0px) scale (1);
+    }
+    50% {
+        transform: translate(15px,-40px) scale(1.3);
+    }
+    100% {
+        transform: translate(35px, -60px) scale (1.8);
+    }
 }
